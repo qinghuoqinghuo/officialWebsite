@@ -57,21 +57,21 @@
               <el-col :span="8" class="xm-24">
                 <div class="p-logo p2-logo1 xm-hide"></div>
                 <div class="h7-text m-b-30 xm-hide">核心团队</div>
-                <div class="h11-text h11-text-1" align="left">
+                <div class="h11-text h11-text-box" align="left">
                   核心研发团队由海外留学博士和国家大数据发展专家咨询委员会委员等多名顶级大数据专家组成，并且与国内外多家科研机构进行广泛深入的技术合作
                 </div>
               </el-col>
               <el-col :span="8" class="xm-24">
                 <div class="p-logo p2-logo2 xm-hide"></div>
                 <div class="h7-text m-b-30 xm-hide">公司实力</div>
-                <div class="h11-text" align="left">荣获国家高新技术企业，2016年被列为十三五国家重点研发计划单位，
+                <div class="h11-text h11-text-box" align="left">荣获国家高新技术企业，2016年被列为十三五国家重点研发计划单位，
                   2017年被国家发改委列为38个国家大数据重大工程之一的“国家安全生产监管监察大数据平台”建设单位。
                 </div>
               </el-col>
               <el-col :span="8" class="xm-24">
                 <div class="p-logo p2-logo3 xm-hide"></div>
                 <div class="h7-text m-b-30 xm-hide">技术优势</div>
-                <div class="h11-text" align="left">
+                <div class="h11-text h11-text-box" align="left">
                   致力于大数据和人工智能AI完整解决方案，拥有完全自主知识产权的大数据平台、NLP语义分析引擎、智能搜索引擎、图计算引擎，深度结合大数据、自然语言分析NLP和人工智能技术，提供数据应用分析服务。
                 </div>
               </el-col>
@@ -95,33 +95,43 @@
           <p class="h11-text no-m-b animated bounceInLeft no-m-t xm-hide" align="center">cooperative partner</p>
           <p class="h7-text no-m-b animated bounceInLeft no-m-t m-b-30 normal-family xm-hide" align="center">
             开放数据资源,提升社会公治</p>
-          <el-row :gutter="60">
+          <el-row>
             <el-col :span="18" :offset="3" class="xm-24">
               <el-col :span="6" class="xm-12">
-                <div class="p-logo p3-logo1 border-radius"></div>
-                <div class="h7-text m-b-30">联通</div>
-                <div class="h11-text" align="left">核心研发团队由海外留学博士和国家大数据发展专家咨询委员会委员等多名顶级大数据专家组成，并且与国内外多家科研机构进行广泛深入的技术合作
+                <div class="unit-box">
+                  <div class="p-logo p3-logo1 border-radius"></div>
+                  <div class="h7-text m-b-30">联通</div>
+                  <div class="h11-text h11-text-box" align="left">
+                    核心研发团队由海外留学博士和国家大数据发展专家咨询委员会委员等多名顶级大数据专家组成，并且与国内外多家科研机构进行广泛深入的技术合作
+                  </div>
                 </div>
               </el-col>
               <el-col :span="6" class="xm-12">
-                <div class="p-logo p3-logo2 border-radius"></div>
-                <div class="h7-text m-b-30">电信</div>
-                <div class="h11-text" align="left">荣获国家高新技术企业，2016年被列为十三五国家重点研发计划单位，
-                  2017年被国家发改委列为38个国家大数据重大工程之一的“国家安全生产监管监察大数据平台”建设单位。
+                <div class="unit-box">
+                  <div class="p-logo p3-logo2 border-radius"></div>
+                  <div class="h7-text m-b-30">电信</div>
+                  <div class="h11-text h11-text-box" align="left">荣获国家高新技术企业，2016年被列为十三五国家重点研发计划单位，
+                    2017年被国家发改委列为38个国家大数据重大工程之一的“国家安全生产监管监察大数据平台”建设单位。
+                  </div>
+                </div>
+
+              </el-col>
+              <el-col :span="6" class="xm-12">
+                <div class="unit-box">
+                  <div class="p-logo p3-logo3 border-radius"></div>
+                  <div class="h7-text m-b-30">华三</div>
+                  <div class="h11-text h11-text-box" align="left">
+                    致力于大数据和人工智能AI完整解决方案，拥有完全自主知识产权的大数据平台、NLP语义分析引擎、智能搜索引擎、图计算引擎，深度结合大数据、自然语言分析NLP和人工智能技术，提供数据应用分析服务。
+                  </div>
                 </div>
               </el-col>
               <el-col :span="6" class="xm-12">
-                <div class="p-logo p3-logo3 border-radius"></div>
-                <div class="h7-text m-b-30">华三</div>
-                <div class="h11-text" align="left">
-                  致力于大数据和人工智能AI完整解决方案，拥有完全自主知识产权的大数据平台、NLP语义分析引擎、智能搜索引擎、图计算引擎，深度结合大数据、自然语言分析NLP和人工智能技术，提供数据应用分析服务。
-                </div>
-              </el-col>
-              <el-col :span="6" class="xm-12">
-                <div class="p-logo p3-logo4 border-radius"></div>
-                <div class="h7-text m-b-30">光力</div>
-                <div class="h11-text" align="left">
-                  致力于大数据和人工智能AI完整解决方案，拥有完全自主知识产权的大数据平台、NLP语义分析引擎、智能搜索引擎、图计算引擎，深度结合大数据、自然语言分析NLP和人工智能技术，提供数据应用分析服务。
+                <div class="unit-box">
+                  <div class="p-logo p3-logo4 border-radius"></div>
+                  <div class="h7-text m-b-30">光力</div>
+                  <div class="h11-text h11-text-box" align="left">
+                    致力于大数据和人工智能AI完整解决方案，拥有完全自主知识产权的大数据平台、NLP语义分析引擎、智能搜索引擎、图计算引擎，深度结合大数据、自然语言分析NLP和人工智能技术，提供数据应用分析服务。
+                  </div>
                 </div>
               </el-col>
             </el-col>
@@ -135,7 +145,7 @@
           <p class="h11-text no-m-b animated bounceInLeft no-m-t xm-hide" align="center">contact us</p>
           <p class="h7-text no-m-b animated bounceInLeft no-m-t m-b-30 normal-family xm-hide" align="center">
             开放数据资源,提升社会公治</p>
-          <el-row :gutter="30">
+          <el-row>
             <el-col :span="24" class="xm-24">
               <el-col :span="16" class="xm-24">
                 <p class="h7-text" align="left">010-64391415</p>
@@ -210,7 +220,7 @@
       'css3-caidai': CSS3_CAIDAI,
       'css3-lingkuai': CSS3_LINGKUAI,
       'css3-lingkuai2': CSS3_LINGKUAI2,
-      'css3-toumingsidai':CSS3_TOUMINGSIDAI,
+      'css3-toumingsidai': CSS3_TOUMINGSIDAI,
       'css3-tanxingshengbo': CSS3_TANXINGSHENGBO
     },
     computed: {},
@@ -350,7 +360,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   html {
-    font-size: 0.625%;
+    font-size: 62.5%;
   }
 
   #indexNew {
@@ -360,9 +370,9 @@
     }
 
     .childBox {
-      position:absolute;
-      top:0;
-      left:0;
+      position: absolute;
+      top: 0;
+      left: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -651,6 +661,10 @@
       font-weight: 500;
     }
 
+    .unit-box {
+      margin: 3rem;
+    }
+
     @media screen and (max-width: 1017px) {
       /*.logo-box {*/
       /*display: none;*/
@@ -675,8 +689,14 @@
         line-height: 3rem;
         font-size: 1.6rem;
       }
+      .unit-box {
+        margin: 1rem;
+      }
     }
     @media screen and (max-width: 851px) {
+      .m-b-30 {
+        margin-bottom: 0;
+      }
       .weather-box {
         display: none;
       }
@@ -714,8 +734,18 @@
         margin-top: 0;
         margin-bottom: 0.5rem;
       }
-      .h11-text-1 {
-        margin-top: 5rem;
+      .h11-text-box {
+        height: 8rem;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+      .p-logo {
+        margin: 0.1rem auto;
+      }
+      .unit-box {
+        margin: 0.5rem;
       }
     }
   }

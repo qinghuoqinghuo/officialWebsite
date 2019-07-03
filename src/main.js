@@ -9,10 +9,13 @@ import animated from 'animate.css' // npm install animate.css --save安装，再
 import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverflow:true
 // import './fullpage.scrollHorizontally.min' // Optional. When using fullpage extensions
 import VueFullPage from 'vue-fullpage.js'
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 
 Vue.use(VueFullPage)
 Vue.use(animated)
 Vue.use(ElementUI)
+Vue.use(iView)
 
 
 

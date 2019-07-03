@@ -227,7 +227,7 @@
     mounted() {
       let self = this
       self.addSection()
-      self.$router.push('/#page1')
+      // self.$router.push('/#page1')
       // console.log(getActiveSection())
     },
     data: function () {
@@ -569,10 +569,10 @@
     .logo-text {
       display: inline-block;
       float: left;
-      padding: 0 0 0 0.5 rrem;
-      height: 2.5 rrem;
+      padding: 0 0 0 0.5rem;
+      height: 2.5rem;
       font-size: 1.5rem;
-      line-height: 2.5 rrem;
+      line-height: 2.5rem;
       color: #fff;
     }
 

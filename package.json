@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "animate.css": "^3.7.0",
+    "axios": "^0.19.0",
     "delaunator": "^3.0.2",
     "element-ui": "^2.6.1",
+    "iview": "^3.4.2",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.2",
     "vue-fullpage.js": "^0.1.2",
+    "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {

@@ -2,8 +2,8 @@
   <div id="constellation_box">
      <Row>
        <Col span="18" offset="3">
-         <Col span="8" v-for="(item,index) in constellationData" :key="index" class = "constellation-list">
-           <p></p>
+         <Col span="8" v-for="(item,index) in constellationData" :key="index" class = "constellation-list" >
+           <p @click="renderConstellationDetails(item.name)"></p>
            <p>{{item.name}}</p>
            <p>({{item.date}})</p>
          </Col>
@@ -52,6 +52,13 @@
           name: '双鱼座',
           date: '2.19-3.20'
         }]
+      }
+    },
+    methods: {
+      renderConstellationDetails(name){
+        debugger
+        let self = this
+        self.$router.push({path: '/constellationDetails?name=' + encodeURI(name)})
       }
     }
   }

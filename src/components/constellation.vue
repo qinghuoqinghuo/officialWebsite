@@ -1,9 +1,13 @@
 <template>
   <div id="constellation_box">
      <Row>
-       <Col span="18" offset="3">
+       <Col span="24">
          <Col span="8" v-for="(item,index) in constellationData" :key="index" class = "constellation-list" >
-           <p @click="renderConstellationDetails(item.name)"></p>
+           <p @click="renderConstellationDetails(item.name)">
+             <span>
+
+             </span>
+           </p>
            <p>{{item.name}}</p>
            <p>({{item.date}})</p>
          </Col>
@@ -71,20 +75,27 @@
       &:hover {
         cursor: pointer;
         p:nth-of-type(1) {
-          transition: all .3s;
-          transform: scale(1.2) rotate(360deg);
+          span {
+            transition: all .3s;
+            transform: scale(1.2) rotate(360deg);
+          }
         }
       }
       p:nth-of-type(1) {
-        width:15vh;
         height: 15vh;
-        background: red;
-        margin:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          display: inline-block;
+          width:10vh;
+          height:10vh;
+        }
       }
       p:nth-of-type(2) {
         height: 5vh;
         color:#B37FEB;
-        font: italic 900 4vh/5vh '黑体';
+        font: italic 900 3vh/5vh '黑体';
         background: linear-gradient(bottom,#7989FE,#C780FE);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -99,74 +110,98 @@
     }
     .constellation-list:nth-of-type(1) {
       p:nth-of-type(1) {
-        background: url("../assets/img/0.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/0.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(2) {
       p:nth-of-type(1) {
-        background: url("../assets/img/1.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/1.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(3) {
       p:nth-of-type(1) {
-        background: url("../assets/img/2.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/2.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(4) {
       p:nth-of-type(1) {
-        background: url("../assets/img/3.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/3.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(5) {
       p:nth-of-type(1) {
-        background: url("../assets/img/4.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/4.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(6) {
       p:nth-of-type(1) {
-        background: url("../assets/img/5.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/5.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(7) {
       p:nth-of-type(1) {
-        background: url("../assets/img/6.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/6.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(8) {
       p:nth-of-type(1) {
-        background: url("../assets/img/7.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/7.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(9) {
       p:nth-of-type(1) {
-        background: url("../assets/img/8.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/8.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(10) {
       p:nth-of-type(1) {
-        background: url("../assets/img/9.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/9.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(11) {
       p:nth-of-type(1) {
-        background: url("../assets/img/10.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/10.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
     .constellation-list:nth-of-type(12) {
       p:nth-of-type(1) {
-        background: url("../assets/img/11.png") no-repeat;
-        background-size: cover;
+        span {
+          background: url("../assets/img/11.png") no-repeat;
+          background-size: cover;
+        }
       }
     }
   }

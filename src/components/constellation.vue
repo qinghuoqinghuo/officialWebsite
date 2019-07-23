@@ -9,7 +9,7 @@
              </span>
            </p>
            <p>{{item.name}}</p>
-           <p>({{item.date}})</p>
+           <p>{{item.date}}</p>
          </Col>
        </Col>
      </Row>

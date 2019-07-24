@@ -11,6 +11,8 @@ import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverfl
 import VueFullPage from 'vue-fullpage.js'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+import myEcharts from './utils/myEcharts.js'
+Vue.use(myEcharts)
 
 Vue.use(VueFullPage)
 Vue.use(animated)

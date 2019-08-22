@@ -4,6 +4,7 @@
  */
 
 import echarts from 'echarts'
+import $ from 'jquery'
 
 const install = function (Vue) {
   Object.defineProperties(Vue.prototype, {
@@ -12,24 +13,72 @@ const install = function (Vue) {
         return {
           //画一条简单的线
           line1: function (id) {
-            let self = this
+            let self = this;
             self.chart = echarts.init(document.getElementById(id));
+            self.chart.showLoading();
+            setTimeout(function(){
+              self.chart.hideLoading();
+            },1000)
             self.chart.clear();
-            const optionData = {
+            let base = +new Date(2014, 9, 3);
+            let oneDay = 24 * 3600 * 1000;
+            let date = [];
+            let data = [Math.random() * 150];
+            let now = new Date(base);
+
+            function addData(shift) {
+              now = [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/');
+              date.push(now);
+              data.push((Math.random() - 0.4) * 10 + data[data.length - 1]);
+              if (shift) {
+                date.shift();
+                data.shift();
+              }
+              now = new Date(+new Date(now) + oneDay);
+            }
+
+            for (var i = 1; i < 100; i++) {
+              addData();
+            }
+
+            let option = {
               xAxis: {
                 type: 'category',
-                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                boundaryGap: false,
+                data: date
               },
               yAxis: {
+                boundaryGap: [0, '50%'],
                 type: 'value'
               },
-              series: [{
-                data: [820, 932, 901, 934, 1290, 1330, 1320],
-                type: 'line',
-                smooth: true
-              }]
+              series: [
+                {
+                  name:'成交',
+                  type:'line',
+                  smooth:true,
+                  symbol: 'none',
+                  stack: 'a',
+                  areaStyle: {
+                    normal: {}
+                  },
+                  data: data
+                }
+              ]
             };
-            self.chart.setOption(optionData);
+
+            setInterval(function () {
+              addData(true);
+              self.chart.setOption({
+                xAxis: {
+                  data: date
+                },
+                series: [{
+                  name:'成交',
+                  data: data
+                }]
+              });
+            }, 500);
+            self.chart.setOption(option);
             window.onresize = function() {
               self.chart.resize();
             }

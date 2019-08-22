@@ -3,6 +3,7 @@
     <Row>
       <Col span="24">
         <div id="chart1"></div>
+        <div id="chart1"></div>
       </Col>
     </Row>
   </div>

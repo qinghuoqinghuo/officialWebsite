@@ -11,12 +11,17 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '/',
+      name: 'echartsDemo',
+      component: echartsDemo
+    },
+    {
       path: '/fullpageScroll',
       name: 'fullpageScroll',
       component: fullpageScroll
     },
     {
-      path: '/',
+      path: '/constellation',
       name: 'constellation',
       component: constellation
     },
@@ -24,11 +29,6 @@ export default new Router({
       path: '/constellationDetails',
       name: 'constellationDetails',
       component: constellationDetails
-    },
-    {
-      path: '/echarts',
-      name: 'echarts',
-      component: echartsDemo
     }
   ]
 })

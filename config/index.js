@@ -11,7 +11,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       // '/api': {
-      //   target: 'http://web.juhe.cn:8080/',
+      //   target: 'http://web.juhe.cn:8080/',assetsRoot
       //   changeOrigin: true,
       //   ws: true,
       //   pathRewrite: {

@@ -10,11 +10,13 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@handsontable/vue": "^4.1.0",
     "animate.css": "^3.7.0",
     "axios": "^0.19.0",
     "delaunator": "^3.0.2",
     "echarts": "^4.2.1",
     "element-ui": "^2.6.1",
+    "handsontable": "^7.2.1",
     "iview": "^3.4.2",
     "jquery": "^3.4.1",
     "node-sass": "^4.11.0",

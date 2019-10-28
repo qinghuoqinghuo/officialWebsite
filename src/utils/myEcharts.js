@@ -14,6 +14,7 @@ const install = function (Vue) {
           //画一条简单的线
           lineOrBar: function (id, data, type) { //id:容器ID,data:数据,type:line或bar
             let self = this;
+            let color = ['rgba(23, 255, 243', 'rgba(119,61,190']
             self.chart = echarts.init(document.getElementById(id));
             self.chart.showLoading();
             setTimeout(function () {
@@ -26,15 +27,22 @@ const install = function (Vue) {
             if (data && type) {
               data.forEach((item, index) => {
                 if (index == 0) {
+                  // x轴数据--数组第一条,只截取不为null的数值
                   xAxisData = data[0].slice(1).filter(j => {
                     return j != null
                   })
                 } else {
+                  // 排除第一列为null的数据
                   if (item[0]) {
+                    // 获取图例数组
                     legendData.push(item[0])
+                    // 获取series数组
                     seriesData.push({
                       name: item[0],
                       type: type,
+                      smooth: true,
+                      barMaxWidth: '20px',
+                      // areaStyle: {normal: {}},
                       data: item.slice(1).filter(k => {
                         return k != null
                       })
@@ -42,7 +50,6 @@ const install = function (Vue) {
                   }
                 }
               })
-              debugger
             } else {
               legendData = ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎'];
               xAxisData = ['周一', '周二', '周三', '周四', '周五', '周六', '周日'];
@@ -75,6 +82,32 @@ const install = function (Vue) {
               ];
             }
             let option = {
+              backgroundColor: '#0d235e',
+              // color: ['#B90C1F','#3D3D3F','#FADD75','#FF897B','#66C7FE'],
+              color: ['#FE4365', '#FC9D9A', '#47D8BE', '#C8C8A9', '#83AF9B'],
+              // color: [{
+              //   type: 'linear',
+              //   colorStops: [
+              //     {
+              //       offset: 0,
+              //       color: '#FE4365' // 0% 处的颜色
+              //     },
+              //     {
+              //       offset: 0.25,
+              //       color: '#FC9D9A' // 40% 处的颜色
+              //     }, {
+              //       offset: 0.5,
+              //       color: '#47D8BE' // 100% 处的颜色
+              //     },{
+              //       offset: 0.75,
+              //       color: '#C8C8A9'
+              //     },{
+              //       offset: 1,
+              //       color: '#83AF9B'
+              //     }
+              //   ],
+              //   globalCoord: false // 缺省为 false
+              // },],
               title: {
                 text: ''
               },
@@ -82,12 +115,22 @@ const install = function (Vue) {
                 trigger: 'axis'
               },
               legend: {
-                data: legendData
+                data: legendData,
+                x: 'center',
+                y: '5%',
+                textStyle: {
+                  fontSize: 12,
+                  color: 'rgb(0,253,255,0.6)'
+                },
+                itemWidth: 20,
+                itemHeight: 10,
+                itemGap: 35
               },
               grid: {
-                left: '3%',
-                right: '4%',
-                bottom: '3%',
+                left: '5%',
+                right: '5%',
+                bottom: '10%',
+                top: '15%',
                 containLabel: true
               },
               toolbox: {
@@ -98,10 +141,39 @@ const install = function (Vue) {
               xAxis: {
                 type: 'category',
                 boundaryGap: false,
-                data: xAxisData
+                data: xAxisData,
+                axisLabel: {
+                  textStyle: {
+                    color: 'rgb(0,253,255,0.6)'
+                  }
+                },
+                axisLine: {
+                  lineStyle: {
+                    color: 'rgb(0,253,255,0.6)'
+                  }
+                }
               },
               yAxis: {
-                type: 'value'
+                type: 'value',
+                axisLabel: {
+                  textStyle: {
+                    color: 'rgb(0,253,255,0.6)'
+                  }
+                },
+                splitLine: {
+                  lineStyle: {
+                    type: 'dashed',
+                    color: 'rgb(23,255,243,0.3)'
+                  }
+                },
+                axisLine: {
+                  lineStyle: {
+                    color: 'rgb(0,253,255,0.6)'
+                  }
+                },
+                areaStyle: {
+                  show:true
+                },
               },
               series: seriesData
             };

@@ -60,7 +60,6 @@
     },
     methods: {
       renderConstellationDetails(name){
-        debugger
         let self = this
         self.$router.push({path: '/constellationDetails?name=' + encodeURI(name)})
       }

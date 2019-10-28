@@ -1,8 +1,8 @@
 <template>
   <div>
     <hot-table :settings="hotSettings"></hot-table>
-    <Button type="success" @click="getTableDataLine()">生成折线图</Button>
-    <Button type="success" @click="getTableDataBar()">生成柱状图</Button>
+    <!--<Button type="success" @click="getTableDataLine()">生成折线图</Button>-->
+    <!--<Button type="success" @click="getTableDataBar()">生成柱状图</Button>-->
   </div>
 </template>
 <script>
@@ -97,8 +97,8 @@
           currentRowClassName: 'my-selectRow', //给选中行添加自定义class类名
           currentColClassName: 'my-selectCol', //给选中列添加自定义class类名
           autoWrapRow: true, //文字是否自动换行(当没有设置colWidths时生效)
-          fixedRowsTop: 1,//列表内容从上面开始,固定定位的行数(不包含行表头)
-          fixedColumnsLeft: 1,//列表内容从左面开始,固定定位的列数(不包含列表头)
+          // fixedRowsTop: 1,//列表内容从上面开始,固定定位的行数(不包含行表头)
+          // fixedColumnsLeft: 1,//列表内容从左面开始,固定定位的列数(不包含列表头)
           fillHandle: true,//是否开启拖拽复制操作(true,false,'horizontal'水平复制,'vertical'垂直复制)
           //autoRowSize: true,
           //autoColumnSize: true,

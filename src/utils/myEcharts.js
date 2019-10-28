@@ -97,7 +97,7 @@ const install = function (Vue) {
               },
               xAxis: {
                 type: 'category',
-                // boundaryGap: false,
+                boundaryGap: false,
                 data: xAxisData
               },
               yAxis: {

@@ -129,6 +129,7 @@ const state = {//handsontable列表数据
     }
   }
 }
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state
 })
+export default store

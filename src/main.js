@@ -12,7 +12,7 @@ import VueFullPage from 'vue-fullpage.js'
 import iView from 'iview';
 import 'iview/dist/styles/iview.css';
 import myEcharts from './utils/myEcharts.js'
-import store from '../store/store'
+import store from './store/store'
 Vue.use(myEcharts)
 
 Vue.use(VueFullPage)

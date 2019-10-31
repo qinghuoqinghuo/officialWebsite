@@ -1,0 +1,22 @@
+ <svg height="60" width="160" xmlns="http://www.w3.org/2000/svg">
+      <style type="text/css">
+	   @keyframes lineAnimate {
+    0% {
+      stroke-dasharray: 100 120;
+      stroke-dashoffset: 20;
+    }
+    100% {
+      stroke-dasharray: 100 120;
+      stroke-dashoffset: -200;
+    }
+  }
+     #shape {
+      stroke-width: 6px;
+      fill: transparent;
+      stroke: #009FFD;
+      animation: lineAnimate 3s infinite;
+    }
+	  </style>	
+      <rect id="shape" height="60" width="160"/>
+</svg>
+ 

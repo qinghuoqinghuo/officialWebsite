@@ -11,7 +11,7 @@ const install = function (Vue) {
     $chart: {
       get() {
         return {
-          //画一条简单的线
+          //折线或柱状图
           lineOrBar: function (id, data, type) { //id:容器ID,data:数据,type:line或bar
             let self = this;
             let color = ['rgba(23, 255, 243', 'rgba(119,61,190']
@@ -124,7 +124,6 @@ const install = function (Vue) {
                 },
                 itemWidth: 20,
                 itemHeight: 10,
-                itemGap: 35
               },
               grid: {
                 left: '5%',
@@ -172,7 +171,7 @@ const install = function (Vue) {
                   }
                 },
                 areaStyle: {
-                  show:true
+                  show: true
                 },
               },
               series: seriesData
@@ -189,6 +188,83 @@ const install = function (Vue) {
             window.onresize = function () {
               self.chart.resize();
             }
+          },
+          // 饼图
+          pie: function (id, data, type) {
+            let chart = echarts.init(document.getElementById(id));
+            chart.showLoading();
+            setTimeout(function () {
+              chart.hideLoading();
+            }, 600)
+            chart.clear();
+            let legendData = [];
+            let xAxisData = [];
+            let seriesData = [];
+            if (data && type) {
+              data.forEach((item, index) => {
+                if (index == 0) {
+                  // x轴数据--数组第一条,只截取不为null的数值
+                  xAxisData = data[0].slice(1).filter(j => {
+                    return j != null
+                  })
+                } else {
+                  // 排除第一列为null的数据
+                  if (item[0]) {
+                    // 获取图例数组
+                    legendData.push(item[0]);
+                    // 获取series数组
+                    let totalCount = 0
+                    item.forEach((k, j) => {
+                      if (j !== 0 && k) {
+                        totalCount += parseInt(k)
+                      }
+                    })
+                    seriesData.push({value: totalCount, name: item[0]})
+                  }
+                }
+              })
+            }
+            let option = {
+              backgroundColor: '#0d235e',
+              // color: ['#B90C1F','#3D3D3F','#FADD75','#FF897B','#66C7FE'],
+              color: ['#FE4365', '#FC9D9A', '#47D8BE', '#C8C8A9', '#83AF9B'],
+              tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
+              },
+              legend: {
+                orient: 'vertical',
+                x: 'left',
+                textStyle: {
+                  fontSize: 12,
+                  color: 'rgb(0,253,255,0.6)'
+                },
+                itemWidth: 20,
+                itemHeight: 10,
+                data: legendData
+              },
+              series: [
+                {
+                  name: '数据分析',
+                  type: 'pie',
+                  selectedMode: 'single',
+                  radius: [0, '70%'],
+                  label: {
+                    normal: {
+                      formatter: function(a,b){
+                        return '年份:'+ a.data.name +'\n总数:'+ a.data.value
+                      }
+                    }
+                  },
+                  labelLine: {
+                    normal: {
+                      show: true
+                    }
+                  },
+                  data: seriesData
+                }]
+            };
+            chart.setOption(option)
           }
         }
       }

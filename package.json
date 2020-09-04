@@ -19,7 +19,7 @@
     "handsontable": "^7.2.1",
     "iview": "^3.4.2",
     "jquery": "^3.4.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.13.1",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.2",
     "vue-fullpage.js": "^0.1.2",
